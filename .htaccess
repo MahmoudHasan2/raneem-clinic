@@ -1,0 +1,11 @@
+# حماية الملفات الحساسة
+<FilesMatch "^(config\.php|install\.sql)$">
+    Require all denied
+</FilesMatch>
+
+# منع عرض قوائم المجلدات
+Options -Indexes
+
+# منع الوصول لمجلد includes مباشرة
+RewriteEngine On
+RewriteRule ^includes/ - [F,L]

@@ -1,0 +1,36 @@
+:root {
+    --gold: #C5A059;
+    --gold-dark: #9A7B3D;
+    --cream: #FAF7F2;
+    --dark: #2C2416;
+    --sidebar-w: 260px;
+}
+* { box-sizing: border-box; }
+body { font-family: 'Cairo', sans-serif; background: var(--cream); margin: 0; color: var(--dark); }
+.admin-wrap { display: flex; min-height: 100vh; }
+.sidebar { width: var(--sidebar-w); background: var(--dark); color: #fff; position: fixed; top: 0; bottom: 0; right: 0; overflow-y: auto; padding-bottom: 30px; }
+.sidebar-brand { padding: 22px 20px; font-size: 1.2rem; font-weight: 800; color: var(--gold); border-bottom: 1px solid rgba(255,255,255,0.08); }
+.sidebar-brand span { color: #fff; font-weight: 400; font-size: 0.9rem; }
+.sidebar-nav { display: flex; flex-direction: column; padding: 10px 0; }
+.sidebar-nav a { color: rgba(255,255,255,0.75); text-decoration: none; padding: 12px 20px; display: flex; align-items: center; gap: 10px; font-size: 0.92rem; transition: 0.2s; border-right: 3px solid transparent; }
+.sidebar-nav a:hover { background: rgba(197,160,89,0.12); color: #fff; }
+.sidebar-nav a.active { background: rgba(197,160,89,0.18); color: var(--gold); border-right-color: var(--gold); font-weight: 700; }
+.nav-group-label { padding: 16px 20px 6px; font-size: 0.72rem; letter-spacing: 1px; color: rgba(255,255,255,0.35); text-transform: uppercase; }
+.content { margin-right: var(--sidebar-w); flex: 1; min-width: 0; }
+.topbar { background: #fff; padding: 14px 30px; box-shadow: 0 2px 10px rgba(0,0,0,0.04); display: flex; justify-content: flex-end; }
+.topbar-user { font-size: 0.9rem; color: var(--dark); }
+.content-inner { padding: 30px; }
+.card { border: none; border-radius: 16px; box-shadow: 0 4px 20px rgba(197,160,89,0.08); margin-bottom: 24px; }
+.card-header { background: #fff; border-bottom: 1px solid rgba(197,160,89,0.15); border-radius: 16px 16px 0 0 !important; font-weight: 700; padding: 16px 20px; }
+.btn-gold { background: var(--gold); border-color: var(--gold); color: #fff; font-weight: 700; }
+.btn-gold:hover { background: var(--gold-dark); border-color: var(--gold-dark); color: #fff; }
+.stat-card { background: #fff; border-radius: 16px; padding: 22px; box-shadow: 0 4px 20px rgba(197,160,89,0.08); text-align: center; }
+.stat-card .num { font-size: 1.8rem; font-weight: 800; color: var(--gold-dark); }
+.stat-card .label { color: #8B7D6B; font-size: 0.85rem; margin-top: 4px; }
+.table thead { background: var(--cream); }
+.badge-type { background: rgba(197,160,89,0.15); color: var(--gold-dark); font-weight: 600; }
+@media (max-width: 900px) {
+    .sidebar { width: 100%; position: relative; height: auto; }
+    .content { margin-right: 0; }
+    .admin-wrap { flex-direction: column; }
+}
